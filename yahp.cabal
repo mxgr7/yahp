@@ -1,0 +1,60 @@
+cabal-version:      2.4
+name:               yahp
+version:            0.1.0.0
+
+-- A short (one-line) description of the package.
+synopsis: Yet another Haskell prelude
+
+-- A longer description of the package.
+-- description:
+
+-- A URL where users can report bugs.
+-- bug-reports:
+
+-- The license under which the package is released.
+license: Apache-2.0
+
+-- A copyright notice.
+-- copyright:
+-- category:
+
+library
+
+    exposed-modules:
+        Yahp
+
+    -- LANGUAGE extensions used by modules in this package.
+    -- other-extensions:
+    build-depends:    base
+                    , lens
+                    , mtl
+                    , protolude
+                    , bytestring
+                    , text
+                    , relude
+                    -- , text
+                    -- , time
+                    
+
+    hs-source-dirs:   src
+    default-language: Haskell2010
+
+    ghc-options:
+     -Werror=partial-fields
+     -Werror=incomplete-record-updates
+     -Werror=incomplete-uni-patterns
+     -Werror=incomplete-patterns
+     -Werror=unused-top-binds -Werror=unused-local-binds -Werror=unused-pattern-binds
+     -Werror=unused-matches
+     -Werror=overflowed-literals
+     -Werror=overlapping-patterns
+     -Werror=missing-fields
+     -Werror=typed-holes
+     -Werror=empty-enumerations
+     -Werror=unrecognised-pragmas
+     -Werror=missing-methods
+     -Wall
+
+-- Local Variables:
+-- compile-command: "nix-shell --run 'cabal exec -- ghc-pkg list'"
+-- End:
